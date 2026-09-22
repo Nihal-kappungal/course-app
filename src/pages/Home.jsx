@@ -50,8 +50,42 @@ const testimonials = [
   },
 ];
 
+const faqs = [
+  {
+    question: "What is included in the AI course?",
+    answer:
+      "You get Malayalam lessons, practical AI workflows, prompt examples, and a guided project that helps you apply what you learn.",
+  },
+  {
+    question: "Is this course suitable for beginners?",
+    answer:
+      "Yes. The course starts with the basics and gradually moves into useful tools and projects, so you do not need a technical background.",
+  },
+  {
+    question: "Do I need coding experience?",
+    answer:
+      "No coding experience is required. You will learn how to use AI clearly and confidently for work, study, and creative projects.",
+  },
+  {
+    question: "Is the course taught in Malayalam?",
+    answer:
+      "Yes. The lessons are designed in Malayalam with familiar examples and simple explanations of important AI concepts.",
+  },
+  {
+    question: "Can I learn at my own pace?",
+    answer:
+      "Yes. The lessons are short and focused, so you can learn when it suits you and return to the material whenever you need it.",
+  },
+  {
+    question: "What will I build by the end?",
+    answer:
+      "You will finish with a practical AI workflow or personal project that you can use, improve, and share.",
+  },
+];
+
 const Home = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [activeFaq, setActiveFaq] = useState(-1);
 
   const showPreviousTestimonial = () => {
     setActiveTestimonial((currentIndex) =>
@@ -458,6 +492,175 @@ const Home = () => {
           </p>
         </div>
       </section>
+      {/* faq section */}
+      <section
+        id="faq"
+        className="px-5 py-24 sm:px-8 lg:px-12 lg:py-32"
+        aria-labelledby="faq-heading"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-black/45">
+              Frequently asked
+            </p>
+            <h2
+              id="faq-heading"
+              className="mt-4 text-4xl font-medium leading-[0.98] tracking-tighter sm:text-6xl"
+            >
+              Everything you need to know before you begin.
+            </h2>
+            <p className="mt-5 text-base leading-7 text-black/60 sm:text-lg">
+              Clear answers about the lessons, language, pace, and practical
+              projects inside the course.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 max-w-5xl space-y-2">
+            {faqs.map(({ question, answer }, index) => {
+              const isOpen = activeFaq === index;
+
+              return (
+                <div
+                  key={question}
+                  className={`overflow-hidden rounded-2xl transition-colors ${
+                    isOpen
+                      ? "bg-white shadow-[0_12px_35px_rgba(22,22,22,0.06)]"
+                      : "bg-white/70"
+                  }`}
+                >
+                  <button
+                    type="button"
+                    className="flex min-h-24 w-full items-center justify-between gap-6 px-7 py-6 text-left sm:px-8"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
+                    onClick={() => setActiveFaq(isOpen ? -1 : index)}
+                  >
+                    <span className="text-lg font-medium tracking-tight sm:text-xl">
+                      {question}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-2xl font-light transition-colors ${
+                        isOpen
+                          ? "bg-[#161616] text-white"
+                          : "bg-[#e5e5e5] text-[#161616]"
+                      }`}
+                    >
+                      {isOpen ? "-" : "+"}
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <p
+                      id={`faq-answer-${index}`}
+                      className="max-w-3xl px-7 pb-7 text-base leading-7 text-black/60 sm:px-8"
+                    >
+                      {answer}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+      {/* footer  */}
+      <footer className="bg-[#161616] px-5 py-12 text-white sm:px-8 lg:px-12 lg:py-16 rounded-t-[64px]">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.5fr_0.75fr_0.75fr_1fr]">
+            <div className="max-w-sm">
+              <a
+                href="/"
+                className="text-2xl font-bold tracking-tight text-white"
+              >
+                AI Malayalam
+              </a>
+              <p className="mt-5 text-base leading-7 text-white/55">
+                Learn artificial intelligence in Malayalam through simple
+                lessons, practical projects, and a community that keeps you
+                moving forward.
+              </p>
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c1ff3d]">
+                Explore
+              </p>
+              <nav
+                className="mt-5 flex flex-col items-start gap-3"
+                aria-label="Footer navigation"
+              >
+                <a
+                  className="text-sm text-white/65 transition-colors hover:text-white"
+                  href="#about"
+                >
+                  About
+                </a>
+                <a
+                  className="text-sm text-white/65 transition-colors hover:text-white"
+                  href="#features"
+                >
+                  Course
+                </a>
+                <a
+                  className="text-sm text-white/65 transition-colors hover:text-white"
+                  href="#testimonials"
+                >
+                  Stories
+                </a>
+              </nav>
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c1ff3d]">
+                Learn more
+              </p>
+              <nav
+                className="mt-5 flex flex-col items-start gap-3"
+                aria-label="Footer information"
+              >
+                <a
+                  className="text-sm text-white/65 transition-colors hover:text-white"
+                  href="#mentor"
+                >
+                  Mentor
+                </a>
+                <a
+                  className="text-sm text-white/65 transition-colors hover:text-white"
+                  href="#faq"
+                >
+                  FAQ
+                </a>
+                <a
+                  className="text-sm text-white/65 transition-colors hover:text-white"
+                  href="mailto:hello@aimalayalam.com"
+                >
+                  Contact
+                </a>
+              </nav>
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#c1ff3d]">
+                Start learning
+              </p>
+              <p className="mt-5 text-sm leading-6 text-white/55">
+                Your first practical AI lesson is waiting.
+              </p>
+              <a
+                href="#join"
+                className="mt-5 inline-flex rounded-full bg-[#c1ff3d] px-5 py-3 text-sm font-bold text-[#161616] transition-colors hover:bg-white"
+              >
+                Join the course
+              </a>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-3 pt-6 text-sm text-white/40 sm:flex-row sm:items-center sm:justify-between">
+            <p>© 2026 AI Malayalam. All rights reserved.</p>
+            <p>Learn clearly. Build confidently.</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 };
