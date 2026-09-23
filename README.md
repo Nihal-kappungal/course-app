@@ -1,16 +1,56 @@
-# React + Vite
+# School of AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive landing page for an AI learning course. The site introduces the course, explains what students will learn, showcases testimonials and mentor information, and answers common enrolment questions.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- Tailwind CSS 4
+- Framer Motion and GSAP for animation
+- Lenis for smooth scrolling
+- Lucide React for icons
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown by Vite in your browser. The page supports hot module replacement while you work.
+
+## Available scripts
+
+| Command           | Purpose                              |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start the Vite development server    |
+| `npm run build`   | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint`    | Run ESLint across the project        |
+
+## Project structure
+
+```text
+src/
+├── App.jsx                 # App shell and smooth-scroll setup
+├── pages/Home.jsx          # Home page composition and interactive state
+├── components/
+│   ├── Header.jsx
+│   └── sections/           # Hero, course, testimonials, FAQ and footer sections
+├── data/homeData.js        # Testimonials and FAQ content
+├── assets/                 # Logo, fonts and user images
+├── index.css               # Global styles and Tailwind entry point
+└── main.jsx                # React entry point
+```
+
+## Content updates
+
+Course copy, testimonials and FAQ entries are kept in `src/data/homeData.js`. Page sections live in `src/components/sections/`, so content and layout can be updated independently. Replace the remote testimonial avatar URLs with local assets before production if the site needs to work without a network connection.
