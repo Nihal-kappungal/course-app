@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "../assets/logo.avif";
 
 const navigation = ["Home", "About", "Features"];
@@ -43,12 +44,14 @@ const Header = () => {
           >
             Login
           </a> */}
-          <a
+          <motion.a
             href="#join"
             className="rounded-md bg-[#9cff57] px-5 py-2.5 text-sm font-medium text-[#151515] transition-colors hover:bg-[#b1ff78] sm:px-6 sm:text-base"
+            animate={{ scale: [1, 1.04, 1] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
           >
             Join
-          </a>
+          </motion.a>
           <button
             type="button"
             className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 lg:hidden"
