@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const curriculumCards = [
   {
     number: "01",
@@ -77,10 +79,22 @@ const FeaturesSection = () => {
 
         <div className="mt-14 grid gap-4 lg:grid-cols-2">
           {curriculumCards.map(
-            ({ number, label, title, description, modules, accent, badge }) => (
-              <article
+            (
+              { number, label, title, description, modules, accent, badge },
+              index,
+            ) => (
+              <motion.article
                 key={number}
                 className={`flex min-h-80 flex-col rounded-2xl p-7 sm:p-9 ${accent}`}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -6, scale: 1.015 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
               >
                 <div className="flex items-start justify-between gap-4">
                   <span
@@ -114,7 +128,7 @@ const FeaturesSection = () => {
                     ))}
                   </ol>
                 </div>
-              </article>
+              </motion.article>
             ),
           )}
         </div>

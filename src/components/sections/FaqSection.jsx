@@ -1,4 +1,5 @@
 import { Minus, Plus } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const FaqSection = ({ faqs, activeFaq, setActiveFaq }) => {
   return (
@@ -62,14 +63,25 @@ const FaqSection = ({ faqs, activeFaq, setActiveFaq }) => {
                     )}
                   </span>
                 </button>
-                {isOpen && (
-                  <p
-                    id={`faq-answer-${index}`}
-                    className="max-w-3xl px-7 pb-7 text-base leading-7 text-black/60 sm:px-8"
-                  >
-                    {answer}
-                  </p>
-                )}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key={`faq-answer-${index}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <p
+                        id={`faq-answer-${index}`}
+                        className="max-w-3xl px-7 pb-7 text-base leading-7 text-black/60 sm:px-8"
+                      >
+                        {answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
