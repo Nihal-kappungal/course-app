@@ -5,7 +5,7 @@ export const testimonials = [
     name: "Akhil Raj",
     role: "Product designer",
     initials: "AR",
-    color: "bg-[#c1ff3d]",
+    image: "https://i.pravatar.cc/96?img=12",
     layout: "lg:col-span-2",
   },
   {
@@ -14,7 +14,7 @@ export const testimonials = [
     name: "Fathima N",
     role: "Entrepreneur",
     initials: "FN",
-    color: "bg-[#f0a6ff]",
+    image: "https://i.pravatar.cc/96?img=47",
     layout: "",
   },
   {
@@ -23,7 +23,7 @@ export const testimonials = [
     name: "Nikhil S",
     role: "Engineering student",
     initials: "NS",
-    color: "bg-[#159dcc] text-white",
+    image: "https://i.pravatar.cc/96?img=56",
     layout: "",
   },
   {
@@ -32,7 +32,7 @@ export const testimonials = [
     name: "Meera Thomas",
     role: "Marketing lead",
     initials: "MT",
-    color: "bg-[#ffbf8a]",
+    image: "https://i.pravatar.cc/96?img=32",
     layout: "lg:col-span-2",
   },
   {
@@ -41,7 +41,7 @@ export const testimonials = [
     name: "Riyas K",
     role: "Freelance creator",
     initials: "RK",
-    color: "bg-[#d8d8d2]",
+    image: "https://i.pravatar.cc/96?img=68",
     layout: "lg:col-span-2",
   },
 ];
