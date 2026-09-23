@@ -24,40 +24,37 @@ const TestimonialsSection = ({
         </div>
 
         <div className="mt-14 hidden gap-4 lg:grid lg:grid-cols-4 lg:grid-rows-2">
-          {testimonials.map(
-            ({ quote, name, role, initials, color, layout }) => (
-              <article
-                key={name}
-                className={`flex min-h-72 flex-col justify-between rounded-2xl p-7 shadow-[0_12px_35px_rgba(22,22,22,0.06)] sm:p-9 ${color} ${layout}`}
-              >
+          {testimonials.map(({ quote, name, role, image, layout }) => (
+            <article
+              key={name}
+              className={`flex min-h-72 flex-col justify-between rounded-2xl p-7 shadow-[0_12px_35px_rgba(22,22,22,0.06)] sm:p-9 bg-white ${layout}`}
+            >
+              <div>
+                <span className="text-4xl font-medium leading-none opacity-45">
+                  “
+                </span>
+                <p className="mt-4 max-w-xl text-lg font-medium leading-7 tracking-tight">
+                  {quote}
+                </p>
+              </div>
+              <div className="mt-10 flex items-center gap-3">
+                <img
+                  src={image}
+                  alt={name}
+                  className="h-11 w-11 rounded-full object-cover"
+                />
                 <div>
-                  <span className="text-4xl font-medium leading-none opacity-45">
-                    “
-                  </span>
-                  <p className="mt-4 max-w-xl text-lg font-medium leading-7 tracking-tight">
-                    {quote}
-                  </p>
+                  <p className="text-sm font-bold">{name}</p>
+                  <p className="text-sm opacity-55">{role}</p>
                 </div>
-                <div className="mt-10 flex items-center gap-3">
-                  <span
-                    aria-hidden="true"
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-white/75 text-xs font-bold text-[#161616]"
-                  >
-                    {initials}
-                  </span>
-                  <div>
-                    <p className="text-sm font-bold">{name}</p>
-                    <p className="text-sm opacity-55">{role}</p>
-                  </div>
-                </div>
-              </article>
-            ),
-          )}
+              </div>
+            </article>
+          ))}
         </div>
 
         <div className="mt-10 lg:hidden">
           {(() => {
-            const { quote, name, role, initials, color } =
+            const { quote, name, role, image, color } =
               testimonials[activeTestimonial];
 
             return (
@@ -73,12 +70,11 @@ const TestimonialsSection = ({
                   </p>
                 </div>
                 <div className="mt-10 flex items-center gap-3">
-                  <span
-                    aria-hidden="true"
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-white/75 text-xs font-bold text-[#161616]"
-                  >
-                    {initials}
-                  </span>
+                  <img
+                    src={image}
+                    alt={name}
+                    className="h-11 w-11 rounded-full object-cover"
+                  />
                   <div>
                     <p className="text-sm font-bold">{name}</p>
                     <p className="text-sm opacity-55">{role}</p>

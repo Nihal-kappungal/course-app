@@ -1,6 +1,6 @@
 const FooterSection = () => {
   return (
-    <footer className="bg-[#161616] px-5 py-12 text-white sm:px-8 lg:px-12 lg:py-16 rounded-t-[64px]">
+    <footer className="bg-[#161616] px-5 py-12 text-white sm:px-8 lg:px-12 lg:py-16">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 border-b border-white/15 pb-12 lg:grid-cols-[1.5fr_0.75fr_0.75fr_1fr]">
           <div className="max-w-sm">
