@@ -48,33 +48,38 @@ export const testimonials = [
 
 export const faqs = [
   {
-    question: "What is included in the AI course?",
+    question: "Can I join if I’m completely new to AI?",
     answer:
-      "You get Malayalam lessons, practical AI workflows, prompt examples, and a guided project that helps you apply what you learn.",
+      "Yes. The course starts with the basics and builds step by step. You do not need prior AI experience or a technical background to begin.",
   },
   {
-    question: "Is this course suitable for beginners?",
+    question: "Are the lessons really in Malayalam?",
     answer:
-      "Yes. The course starts with the basics and gradually moves into useful tools and projects, so you do not need a technical background.",
+      "Yes. The course is taught in conversational Malayalam. You can focus on understanding the ideas while getting familiar with the tools and their terminology.",
   },
   {
-    question: "Do I need coding experience?",
+    question: "Are these live classes or recorded lessons?",
     answer:
-      "No coding experience is required. You will learn how to use AI clearly and confidently for work, study, and creative projects.",
+      "These are recorded lessons. Watch them when it suits you, pause to practise, and replay topics you want to understand better. There is no fixed daily class schedule.",
   },
   {
-    question: "Is the course taught in Malayalam?",
+    question: "How long can I access the course?",
     answer:
-      "Yes. The lessons are designed in Malayalam with familiar examples and simple explanations of important AI concepts.",
+      "Your one-time course payment includes lifetime access. You can learn on mobile or desktop and return to the lessons. Future course updates are included.",
   },
   {
-    question: "Can I learn at my own pace?",
+    question: "Will I receive a certificate?",
     answer:
-      "Yes. The lessons are short and focused, so you can learn when it suits you and return to the material whenever you need it.",
+      "Yes. Eduvbe provides a certificate on course completion. You can add it to your learning profile or share it on LinkedIn.",
   },
   {
-    question: "What will I build by the end?",
+    question: "Do AI tools have separate charges?",
     answer:
-      "You will finish with a practical AI workflow or personal project that you can use, improve, and share.",
+      "Third-party AI tools may have free usage limits or paid plans. Check individual tool pricing as you practise, and ask our team about the tools you plan to use before enrolling.",
+  },
+  {
+    question: "What should I know before paying?",
+    answer:
+      "You’ll continue to Eduvbe to create or sign in to your account and complete enrolment. Review your order total and the Refund Policy before paying. Our team can help with any questions.",
   },
 ];

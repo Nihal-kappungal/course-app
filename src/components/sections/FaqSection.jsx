@@ -1,3 +1,5 @@
+import { Minus, Plus } from "lucide-react";
+
 const FaqSection = ({ faqs, activeFaq, setActiveFaq }) => {
   return (
     <section
@@ -47,13 +49,17 @@ const FaqSection = ({ faqs, activeFaq, setActiveFaq }) => {
                   </span>
                   <span
                     aria-hidden="true"
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-2xl font-light transition-colors ${
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors ${
                       isOpen
                         ? "bg-[#161616] text-white"
                         : "bg-[#e5e5e5] text-[#161616]"
                     }`}
                   >
-                    {isOpen ? "-" : "+"}
+                    {isOpen ? (
+                      <Minus size={18} strokeWidth={1.75} />
+                    ) : (
+                      <Plus size={18} strokeWidth={1.75} />
+                    )}
                   </span>
                 </button>
                 {isOpen && (
