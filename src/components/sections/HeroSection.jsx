@@ -33,7 +33,7 @@ const HeroSection = () => {
               >
                 ★★★★★
               </span>
-              <span>4.8 / 5</span>
+              <span>4.6 / 5</span>
             </div>
           </div>
         </div>

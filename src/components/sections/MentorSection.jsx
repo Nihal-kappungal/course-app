@@ -8,7 +8,7 @@ const MentorSection = () => {
       aria-labelledby="mentor-heading"
     >
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:gap-20">
-        <div className="relative mx-auto w-full max-w-xs">
+        <div className="relative w-full max-w-xs lg:mx-auto">
           <div className="aspect-4/5 overflow-hidden rounded-2xl bg-[#243237] shadow-[0_24px_55px_rgba(22,22,22,0.14)]">
             <img
               src={mentorImage}
