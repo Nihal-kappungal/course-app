@@ -1,3 +1,5 @@
+import logo from "../../assets/logo.avif";
+
 const FooterSection = () => {
   return (
     <footer className="bg-[#161616] px-5 py-12 text-white sm:px-8 lg:px-12 lg:py-16">
@@ -6,9 +8,15 @@ const FooterSection = () => {
           <div className="max-w-sm">
             <a
               href="/"
-              className="text-2xl font-bold tracking-tight text-white"
+              className="inline-flex items-center"
+              aria-label="AI Malayalam home"
             >
-              AI Malayalam
+              <img
+                src={logo}
+                alt="AI Malayalam logo"
+                className="h-12 w-auto rounded-full object-cover"
+              />
+              Edvube
             </a>
             <p className="mt-5 text-base leading-7 text-white/55">
               Learn artificial intelligence in Malayalam through simple lessons,
@@ -91,7 +99,7 @@ const FooterSection = () => {
         </div>
 
         <div className="flex flex-col gap-3 pt-6 text-sm text-white/40 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 AI Malayalam. All rights reserved.</p>
+          <p>© 2026 edvube. All rights reserved.</p>
           <p>Learn clearly. Build confidently.</p>
         </div>
       </div>

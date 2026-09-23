@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <main className="min-h-screen w-full overflow-hidden bg-[#f8f8f6] text-[#161616]">
+    <main className="min-h-screen w-full overflow-hidden bg-[#f8f8f6] pt-20 text-[#161616] sm:pt-24">
       <Header />
       <HeroSection />
       <AboutSection />

@@ -18,15 +18,24 @@ const MentorSection = () => {
           </div>
         </div>
 
-        <p
-          id="mentor-heading"
-          className="font-medium leading-none tracking-tight text-2xl md:text-4xl"
-        >
-          We make artificial intelligence easier to understand, easier to use,
-          and more useful in everyday life. Learn in Malayalam through clear
-          explanations, practical projects, and guidance that helps you move
-          from curiosity to confidence.
-        </p>
+        <div className="space-y-5">
+          <p
+            id="mentor-heading"
+            className="font-medium leading-none tracking-tight text-2xl md:text-4xl"
+          >
+            We make artificial intelligence easier to understand, easier to use,
+            and more useful in everyday life. Learn in Malayalam through clear
+            explanations, practical projects, and guidance that helps you move
+            from curiosity to confidence.
+          </p>
+
+          <div className="mt-10 flex items-center gap-3">
+            <div>
+              <p className="text-sm font-bold ">Aflu</p>
+              <p className="text-sm ">Founder, Edvube</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

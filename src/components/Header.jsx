@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="relative z-10 w-full px-4 pt-4 sm:px-6 sm:pt-6">
+    <header className="fixed left-0 top-0 z-10 w-full px-4 pt-4 sm:px-6 sm:pt-6">
       <div className="mx-auto flex max-w-7xl items-center gap-4 rounded-lg bg-black px-4 py-2.5 sm:px-5 sm:py-2">
         <a
           href="/"
@@ -29,7 +29,7 @@ const Header = () => {
             <a
               key={item}
               href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
-              className="rounded-full px-5 py-2 text-sm font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white"
+              className="rounded-full px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10 hover:text-white"
             >
               {item}
             </a>
@@ -37,12 +37,12 @@ const Header = () => {
         </nav>
 
         <div className="flex flex-1 items-center justify-end gap-2">
-          <a
+          {/* <a
             href="#login"
             className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition-colors hover:bg-[#686363] sm:px-6 sm:text-base"
           >
             Login
-          </a>
+          </a> */}
           <a
             href="#join"
             className="rounded-md bg-[#9cff57] px-5 py-2.5 text-sm font-medium text-[#151515] transition-colors hover:bg-[#b1ff78] sm:px-6 sm:text-base"

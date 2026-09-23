@@ -7,7 +7,7 @@ const AboutSection = () => {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-black/45">
+          <p className="text-xs font-bold lowercase tracking-[0.24em] text-black/45">
             Build trust
           </p>
           <h2
@@ -22,63 +22,54 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-[1.08fr_1fr_0.92fr] lg:grid-rows-[1fr_auto]">
-          <article className="relative min-h-72 overflow-hidden rounded-2xl bg-[#159dcc] p-7 text-white shadow-[0_18px_45px_rgba(21,157,204,0.2)] sm:p-9 lg:row-span-2">
-            <div className="relative z-10 flex h-full flex-col justify-between">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-white/70">
-                  Learners growing together
-                </p>
-                <p className="mt-8 text-7xl font-medium leading-none tracking-[-0.08em] sm:text-8xl">
-                  4.9/5
-                </p>
-              </div>
-              <div className="mt-12 max-w-xs">
-                <p className="text-lg font-medium leading-6">
-                  “I finally understand how to use AI in my daily work.”
-                </p>
-                <p className="mt-4 text-sm text-white/70">
-                  Demo feedback from a Malayalam learner
-                </p>
-              </div>
-            </div>
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-16 -right-10 h-48 w-48 rounded-full border-28 border-white/15"
-            />
-          </article>
-
-          <article className="min-h-52 rounded-2xl bg-white p-7 shadow-[0_12px_35px_rgba(22,22,22,0.06)] sm:p-9">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-black/45">
-              Course completion
+        <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-black/10 text-center shadow-[0_12px_35px_rgba(22,22,22,0.06)] sm:grid-cols-3 lg:grid-cols-6">
+          <div className="flex flex-col items-center bg-white p-6 sm:p-7">
+            <p className="flex h-12 items-center justify-center text-4xl font-medium leading-none tracking-[-0.06em] text-[#161616] sm:text-5xl">
+              4.6/5
             </p>
-            <p className="mt-8 text-6xl font-medium leading-none tracking-[-0.08em] text-[#161616] sm:text-7xl">
-              86%
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+              Rating
             </p>
-            <p className="mt-5 max-w-xs text-sm leading-5 text-black/55">
-              Learners are building a steady habit with short, focused lessons.
+          </div>
+          <div className="flex flex-col items-center bg-white p-6 sm:p-7">
+            <p className="flex h-12 items-center justify-center text-4xl font-medium leading-none tracking-[-0.06em] text-[#161616] sm:text-5xl">
+              5,000+
             </p>
-          </article>
-
-          <article className="min-h-52 rounded-2xl bg-[#c1ff3d] p-7 sm:p-9">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-black/55">
-              Active learners
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+              Students
             </p>
-            <p className="mt-8 text-6xl font-medium leading-none tracking-[-0.08em] text-[#161616] sm:text-7xl">
-              2,500+
+          </div>
+          <div className="flex flex-col items-center bg-white p-6 sm:p-7">
+            <p className="flex h-12 items-center justify-center text-4xl font-medium leading-none tracking-[-0.06em] text-[#161616] sm:text-5xl">
+              11
             </p>
-            <p className="mt-5 max-w-xs text-sm leading-5 text-black/65">
-              Curious people learning and sharing progress every month.
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+              Modules
             </p>
-          </article>
-
-          <div className="flex min-h-20 items-center justify-between rounded-2xl bg-[#161616] px-7 py-5 text-white sm:px-9 lg:col-span-2">
-            <span className="text-sm font-bold uppercase tracking-[0.18em] text-white/55">
-              Lessons made for real life
-            </span>
-            <span className="text-3xl font-medium tracking-tighter sm:text-4xl">
-              20+ modules
-            </span>
+          </div>
+          <div className="flex flex-col items-center bg-white p-6 sm:p-7">
+            <p className="flex h-12 items-center justify-center text-4xl font-medium leading-none tracking-[-0.06em] text-[#161616] sm:text-5xl">
+              79
+            </p>
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+              Lessons
+            </p>
+          </div>
+          <div className="flex flex-col items-center bg-white p-6 sm:p-7">
+            <p className="flex h-12 items-center justify-center text-2xl font-medium leading-none tracking-[-0.04em] text-[#161616] sm:text-3xl">
+              Malayalam
+            </p>
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-black/55">
+              Language
+            </p>
+          </div>
+          <div className="flex flex-col items-center bg-white p-6 sm:p-7">
+            <p className="flex h-12 items-center justify-center text-2xl font-medium leading-none tracking-[-0.04em] text-[#161616] sm:text-3xl">
+              Included
+            </p>
+            <p className="mt-4 text-xs font-bold uppercase tracking-[0.16em] text-black/45">
+              Certificate
+            </p>
           </div>
         </div>
       </div>
