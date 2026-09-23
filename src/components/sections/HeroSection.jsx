@@ -1,15 +1,41 @@
+import { testimonials } from "../../data/homeData";
+
 const HeroSection = () => {
   return (
     <section className="hero-section px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:px-12 lg:pt-28">
       <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
-        <div className="hero-badge mb-7 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-medium shadow-sm">
-          <span
-            aria-hidden="true"
-            className="text-base leading-none text-[#ff8b86]"
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-left">
+          <div
+            className="flex items-center"
+            aria-label="Students from our community"
           >
-            ♥
-          </span>
-          Loved by 10,000+ people
+            {testimonials.map((testimonial, index) => (
+              <img
+                key={testimonial.name}
+                src={testimonial.image}
+                alt=""
+                className={`h-10 w-10 rounded-full border-2 border-white object-cover shadow-sm sm:h-11 sm:w-11 ${
+                  index > 0 ? "-ml-2" : ""
+                }`}
+              />
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <strong className="text-sm font-bold leading-none sm:text-base">
+              +5,000 students worldwide
+            </strong>
+            <div className="flex items-center gap-2 text-xs text-black/60 sm:text-sm">
+              <span className="font-medium">Excellent</span>
+              <span
+                className="tracking-[0.12em] text-lg leading-none text-[#f7bd24]"
+                aria-label="5 out of 5 stars"
+              >
+                ★★★★★
+              </span>
+              <span>4.8 / 5</span>
+            </div>
+          </div>
         </div>
 
         <h1 className="max-w-4xl text-5xl font-medium leading-[0.92] tracking-[-0.06em] sm:text-7xl lg:text-[5.4rem]">
